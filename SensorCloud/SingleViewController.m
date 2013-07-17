@@ -22,7 +22,7 @@
     // set the API key for Xively
     NSString* apiKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"XivelyApiKey"];
     if (apiKey == nil)
-        apiKey = @"8M4y4OSv7YDXU7BoMAVOs4PmRYP1bHxmInQ1nGppeKoKvJj3";
+        apiKey = @"txvM3AzitVGjBZCHJZgRsTHANCYOkDmkWEUTqOCnuGGSdxwe";
     
     self.xivelyApiKey.text = apiKey;
 }

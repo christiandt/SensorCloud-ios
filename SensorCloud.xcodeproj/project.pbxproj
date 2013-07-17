@@ -59,6 +59,7 @@
 		2FE835EA17478B5600E1BC97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE835E917478B5600E1BC97 /* SystemConfiguration.framework */; };
 		2FE835EC17478B7400E1BC97 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE835EB17478B7400E1BC97 /* libicucore.dylib */; };
 		2FE835EE17478BA100E1BC97 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE835ED17478BA100E1BC97 /* MobileCoreServices.framework */; };
+		8039A6CF17968ADF007F784F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8039A6CE17968ADF007F784F /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		2FE835E917478B5600E1BC97 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2FE835EB17478B7400E1BC97 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		2FE835ED17478BA100E1BC97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8039A6CE17968ADF007F784F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		2FAD697917476570003AA4BE = {
 			isa = PBXGroup;
 			children = (
+				8039A6CE17968ADF007F784F /* Icon@2x.png */,
 				2FAD698D17476570003AA4BE /* SensorCloud */,
 				2FAD698417476570003AA4BE /* Frameworks */,
 				2FAD698317476570003AA4BE /* Products */,
@@ -394,6 +397,7 @@
 				2FAD69A117476571003AA4BE /* MainStoryboard.storyboard in Resources */,
 				2FA2D904174BD659008BCB26 /* 19-gear.png in Resources */,
 				2FA2D906174BD6F7008BCB26 /* 33-cabinet.png in Resources */,
+				8039A6CF17968ADF007F784F /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

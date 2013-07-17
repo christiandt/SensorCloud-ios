@@ -54,7 +54,8 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
 
     // XBUG brunch UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     // XBUG brunch self.navigationItem.rightBarButtonItem = addButton;
@@ -73,34 +74,34 @@
             // If appropriate, configure the new managed object.
             // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
             [newManagedObject setValue:[NSNumber numberWithInt:idx+1] forKey:@"portID"];
-            [newManagedObject setValue:[NSNumber numberWithInt:397315461] forKey:@"feedID"];
+            [newManagedObject setValue:[NSNumber numberWithInt:1560886817] forKey:@"feedID"];
             [newManagedObject setValue:[NSNumber numberWithDouble:0.0] forKey:@"currentValue"];
             [newManagedObject setValue:[NSDate date] forKey:@"lastUpdate"];
             
             if (idx == 0)
             {
-                [newManagedObject setValue:@"meat" forKey:@"datastreamID"];
-                [newManagedObject setValue:[NSNumber numberWithInt:5] forKey:@"icon"];
+                [newManagedObject setValue:@"Office" forKey:@"datastreamID"];
+                [newManagedObject setValue:[NSNumber numberWithInt:2] forKey:@"icon"];
             }
             else if (idx == 1)
             {
-                [newManagedObject setValue:@"smoker" forKey:@"datastreamID"];
-                [newManagedObject setValue:[NSNumber numberWithInt:4] forKey:@"icon"];
+                [newManagedObject setValue:@"Water" forKey:@"datastreamID"];
+                [newManagedObject setValue:[NSNumber numberWithInt:2] forKey:@"icon"];
             }
             else if (idx == 2)
             {
-                [newManagedObject setValue:@"room" forKey:@"datastreamID"];
+                [newManagedObject setValue:@"Air" forKey:@"datastreamID"];
                 [newManagedObject setValue:[NSNumber numberWithInt:2] forKey:@"icon"];
             }
             else if (idx == 3)
             {
-                [newManagedObject setValue:@"temperature" forKey:@"datastreamID"];
-                [newManagedObject setValue:[NSNumber numberWithInt:2] forKey:@"icon"];
+                [newManagedObject setValue:@"Light" forKey:@"datastreamID"];
+                [newManagedObject setValue:[NSNumber numberWithInt:4] forKey:@"icon"];
             }
             else if (idx == 4)
             {
-                [newManagedObject setValue:@"humidity" forKey:@"datastreamID"];
-                [newManagedObject setValue:[NSNumber numberWithInt:3] forKey:@"icon"];
+                [newManagedObject setValue:@"Meat" forKey:@"datastreamID"];
+                [newManagedObject setValue:[NSNumber numberWithInt:5] forKey:@"icon"];
             }
         
         }
@@ -321,9 +322,11 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Port *port = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%f %@", [port.currentValue doubleValue], port.datastreamID];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%.2f)", port.datastreamID, [port.currentValue doubleValue]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [port.lastUpdate description]];
 }
+
+
 
 
 @end
